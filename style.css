@@ -1,0 +1,64 @@
+body{
+    background-color: white;
+    animation: dayToNight 12s infinite 2s;
+}
+
+.contenido {
+    position: absolute;
+    top: 50%;
+    left: 50%;;
+    transform: translate(-50%, -50%);
+    display: block;
+}
+
+.soleado{
+    height: 150px;
+    width:  150px;
+    border-radius:  50%;
+    background-color: #fcd25b;
+
+}
+
+.sombra{
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    background-color: white;
+    animation: movesShadow 12s infinite 2s;
+
+}
+
+
+@keyframes movesShadow {
+    0%{
+        transform: translateX(150px);
+        background-color: white;
+    }
+
+    50% {
+        transform:  translateX(-10px);
+        background-color: black;
+    }
+
+    100% {
+        transform:  translateX(-170px);
+        background-color: white;
+    }
+}
+
+@keyframes dayToNight {
+    0%{
+     
+        background-color: white;
+    }
+
+    50% {
+      
+        background-color: black;
+    }
+
+    100% {
+     
+        background-color: white;
+    }
+}
